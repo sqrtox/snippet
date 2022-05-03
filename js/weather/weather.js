@@ -13,14 +13,17 @@ const weatherResolve = {
 }
 
 const getWeather = async () => {
-  const { data } = await axios.get('https://weathernews.jp/onebox/35.691667/139.750000/q=%E6%9D%B1%E4%BA%AC', {
-    headers: {
-      'User-Agent': new UserAgent([/Chrome/, {
-        deviceCategory: 'desktop',
-        platform: 'Win32'
-      }]).toString()
-    }
-  })
+  const { data } = await axios.get(
+    'https://weathernews.jp/onebox/62.2/129.44/q=%E5%A5%A5%E5%A4%9A%E6%91%A9'
+    //'https://weathernews.jp/onebox/35.691667/139.750000/q=%E6%9D%B1%E4%BA%AC'
+    , {
+      headers: {
+        'User-Agent': new UserAgent([/Chrome/, {
+          deviceCategory: 'desktop',
+          platform: 'Win32'
+        }]).toString()
+      }
+    })
   const { window: { document } } = new JSDOM(data)
 
   const group = document.querySelectorAll('#flick_list > .wTable__group')
@@ -38,7 +41,7 @@ const getWeather = async () => {
 
       hours[h] = {
         weather: weatherResolve[i.match(/\/(\d+)\.[a-z]+$/)[1]],
-        temperature: Number(e.getElementsByClassName('t')[0].textContent.match(/\d+/)[0])
+        temperature: Number(e.getElementsByClassName('t')[0].textContent.match(/-?\d+/)[0])
       }
     }
 
