@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(163, 163, 163);
+    height: 100%;
+}
+
+.l {
+    border: 1px solid rgb(0, 132, 255);
+    background-color: rgba(0, 132, 255, 0.25);
+    height: 1rem;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+.bg {
+    background-image:url(C:/Users/artox/Downloads/aaaaaa.png);
+}
