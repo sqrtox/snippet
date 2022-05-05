@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="base64js.min.js"></script>
+</head>
+
+<body>
+    <label for="date-min-input">date min:</label>
+    <input type="date" min="2015-01-01" value="2021-01-16" required id="date-min-input" />
+    <label for="date-min-input">date max:</label>
+    <input type="date" min="2015-01-01" value="2021-01-16" required id="date-max-input" />
+    <br>
+    <label for="type-select">type:</label>
+    <select id="type-select" value="default">
+        <option value="default">default</option>
+        <option value="mfa">mfa</option>
+    </select>
+    <br>
+    <label for="count-input">count:</label>
+    <input id="count-input" type="number" value="10" />
+    <br>
+    <button id="create-button">create</button>
+    <button id="copy-button">copy</button>
+    <hr>
+    <textarea id="result" rows="1" style="width: 100%"></textarea>
+    <script src="main.js"></script>
+</body>
+
+</html>
