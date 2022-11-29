@@ -1,0 +1,26 @@
+.input-label {
+    user-select: none;
+}
+
+.success-text {
+    color: lime;
+}
+
+.error-text {
+    color: red;
+}
+
+table {
+    background-color: #ffe;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #eee;
+}
+
+table th,
+table td {
+    border: solid 1px #aaa;
+    padding: 15px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <title>openFile demo</title>
+    <meta charset="UTF-8" />
+    <script src="./openFile.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <label class="input-label" for="accept-input">受け入れ可能なファイル形式：</label>
+    <input id="accept-input" />
+    <br />
+    <label class="input-label" for="multiple-checkbox">複数選択可能：</label>
+    <input id="multiple-checkbox" type="checkbox" />
+    <br>
+    <label class="input-label" for="delay-input">結果の遅延：</label>
+    <input id="delay-input" type="number" value="300" min="0" />
+    <hr />
+    <button id="open-file-button">ファイルを開く</button>
+    <button id="clear-result-button">クリア</button>
+    <div id="result"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
